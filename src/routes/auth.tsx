@@ -53,11 +53,15 @@ function AuthPage() {
       if (mode === "login") {
         const u = await login(identifier, password);
         toast.success(`Welcome back, ${u.fullName.split(" ")[0]}`);
-        navigate({ to: u.role === "admin" ? "/admin" : "/dashboard" });
+        // Redirect to scan2pay-web dashboard
+        const dashboardUrl = import.meta.env.PROD ? 'https://scan2pay.site' : 'http://localhost:3000';
+        window.location.href = `${dashboardUrl}/dashboard`;
       } else {
         await register({ fullName, phone, email, password, userType, businessName });
         toast.success("Account created — your QR code is ready");
-        navigate({ to: "/my-code" });
+        // Redirect to scan2pay-web to view code
+        const dashboardUrl = import.meta.env.PROD ? 'https://scan2pay.site' : 'http://localhost:3000';
+        window.location.href = `${dashboardUrl}/my-code`;
       }
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Something went wrong");
