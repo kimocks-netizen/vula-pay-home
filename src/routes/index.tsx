@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import { Logo } from "@/components/Logo";
+import logoNoBg from "@/assets/logo-no-bg.png";
 import heroVendor from "@/assets/hero-vendor.png";
 import kitLanyardBib from "@/assets/kit-lanyard-bib.png";
 import usePetrol from "@/assets/use-petrol.png";
@@ -304,10 +305,10 @@ function Landing() {
             <div className="rounded-3xl border border-border bg-card p-6 shadow-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs tracking-widest text-muted-foreground uppercase">Vula Pay</p>
+                  <p className="font-display text-xs font-bold tracking-widest text-primary uppercase">Vula Pay</p>
                   <h3 className="mt-1 font-display text-xl font-bold">Payment</h3>
                 </div>
-                <QrCode className="size-7 text-primary" />
+                <img src={logoNoBg} alt="Vula Pay" className="size-9 object-contain" />
               </div>
               <div className="mt-6 rounded-2xl bg-secondary p-5">
                 <p className="text-xs text-muted-foreground">Paying to</p>
@@ -336,9 +337,13 @@ function Landing() {
       {/* Stories */}
       <section id="stories" className="border-y border-border bg-secondary/50">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <div className="max-w-xl">
+          <div className="text-center">
             <p className="font-display text-sm font-bold tracking-widest text-primary uppercase">Who uses it</p>
-            <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">Real people, getting paid every day</h2>
+            <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+              Real people,{" "}
+              <span className="text-primary">getting paid</span>{" "}
+              <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">every day.</span>
+            </h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {stories.map((s) => {
