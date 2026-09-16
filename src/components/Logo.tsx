@@ -9,7 +9,7 @@ export function Logo({ inverted = false }: { inverted?: boolean }) {
       <span
         className={`font-display text-lg font-bold tracking-tight ${inverted ? "text-ink-foreground" : "text-foreground"}`}
       >
-        Scan<span className="text-primary">Pay</span>
+        Vula<span className="text-primary"> Pay</span>
       </span>
     </span>
   );
