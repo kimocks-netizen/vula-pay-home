@@ -5,9 +5,9 @@ Scan2Pay-frontend/
 │
 ├── src/
 │   ├── assets/                           # Static images
-│   │   ├── hero-vendor.jpg
-│   │   ├── kit-lanyard-bib.jpg
-│   │   └── ...                           # use-*.jpg images
+│   │   ├── hero-vendor.png
+│   │   ├── kit-lanyard-bib.png
+│   │   └── ...                           # use-*.png images
 │   │
 │   ├── components/
 │   │   ├── ui/                           # shadcn/ui primitives (Radix-based)

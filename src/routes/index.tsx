@@ -12,11 +12,12 @@ import {
 } from "lucide-react";
 
 import { Logo } from "@/components/Logo";
-import heroVendor from "@/assets/hero-vendor.jpg";
-import kitLanyardBib from "@/assets/kit-lanyard-bib.jpg";
-import usePetrol from "@/assets/use-petrol.jpg";
-import useTips from "@/assets/use-tips.jpg";
-import useTaxi from "@/assets/use-taxi.jpg";
+import heroVendor from "@/assets/hero-vendor.png";
+import kitLanyardBib from "@/assets/kit-lanyard-bib.png";
+import usePetrol from "@/assets/use-petrol.png";
+import useTips from "@/assets/use-tips.png";
+import useTaxi from "@/assets/use-taxi.png";
+import useCarwash from "@/assets/use-carwash.png";
 import stepsLaptopLight from "@/assets/steps-laptop-light.png";
 import stepsLaptopDark from "@/assets/steps-laptop-dark.png";
 import stepsMobileLight from "@/assets/steps-mobile-light.png";
@@ -50,7 +51,7 @@ const emptyCms: CmsImages = {
 
 const fetchCmsImages = createServerFn({ method: "GET" }).handler(async (): Promise<CmsImages> => {
   try {
-    const API = process.env.VITE_API_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "";
+    const API = import.meta.env.VITE_API_URL ?? "";
     if (!API) return emptyCms;
     const res = await fetch(`${API}/cms/homepage`, { signal: AbortSignal.timeout(4000) });
     if (!res.ok) return emptyCms;
@@ -113,9 +114,9 @@ function Landing() {
     { slot: cms.feature_1, name: "Vula Tip · Waiters & baristas",  quote: "People don't carry cash anymore. They just Vula Tip before they even leave the table.",   fallback: useTips   },
     { slot: cms.feature_2, name: "Vula Tip · Petrol attendants",   quote: "I keep my code on a lanyard. Every shift, the Vulas come through.",                        fallback: usePetrol },
     { slot: cms.banner,    name: "Vula Pay · Taxi operators",      quote: "The sticker stays in the taxi. Passengers Vula Pay the fare — no change, no waiting.",      fallback: useTaxi   },
-    { slot: cms.feature_3, name: "Vula Pay · Barber shops",        quote: "No card machine, no cash. They scan, they Vula Pay, I'm done. Simple.",                     fallback: null      },
-    { slot: cms.feature_4, name: "Vula Pay · Car wash",            quote: "We stuck the code on the gate. They Vula Pay while we're still drying the car.",            fallback: null      },
-    { slot: cms.feature_5, name: "Vula Give · Tip earners",        quote: "A customer Vula Gave me R50 from across the coffee shop. I didn't even ask.",               fallback: null      },
+    { slot: cms.feature_3, name: "Vula Pay · Barber shops",        quote: "No card machine, no cash. They scan, they Vula Pay, I'm done. Simple.",                     fallback: useTips    },
+    { slot: cms.feature_4, name: "Vula Pay · Car wash",            quote: "We stuck the code on the gate. They Vula Pay while we're still drying the car.",            fallback: useCarwash },
+    { slot: cms.feature_5, name: "Vula Give · Tip earners",        quote: "A customer Vula Gave me R50 from across the coffee shop. I didn't even ask.",               fallback: usePetrol  },
   ].filter((s) => s.slot.url || s.fallback);
 
   return (

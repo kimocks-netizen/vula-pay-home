@@ -1,16 +1,18 @@
-import { ScanLine } from "lucide-react";
+import navLight from "@/assets/nav-light-logo.png";
+import navDark from "@/assets/nav-dark-logo.png";
 
 export function Logo({ inverted = false }: { inverted?: boolean }) {
+  if (inverted) {
+    return (
+      <span className="inline-flex items-center">
+        <img src={navDark} alt="Vula Pay" className="h-8 w-auto" />
+      </span>
+    );
+  }
   return (
-    <span className="inline-flex items-center gap-2">
-      <span className="grid size-8 place-items-center rounded-lg bg-primary text-primary-foreground">
-        <ScanLine className="size-4" strokeWidth={2.5} />
-      </span>
-      <span
-        className={`font-display text-lg font-bold tracking-tight ${inverted ? "text-ink-foreground" : "text-foreground"}`}
-      >
-        Vula<span className="text-primary"> Pay</span>
-      </span>
+    <span className="inline-flex items-center">
+      <img src={navLight} alt="Vula Pay" className="h-8 w-auto block dark:hidden" />
+      <img src={navDark}  alt="Vula Pay" className="h-8 w-auto hidden dark:block" />
     </span>
   );
 }
