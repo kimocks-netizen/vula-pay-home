@@ -50,7 +50,7 @@ export const api = {
     const phone = normalisePhone(identifier);
     const email = identifier.trim().toLowerCase();
     const found = users.find((u) => u.phone === phone || u.email.toLowerCase() === email);
-    if (!found) throw new Error("No ScanPay account found for those details.");
+    if (!found) throw new Error("No Vula Pay account found for those details.");
     if (found.password !== password) throw new Error("That password is incorrect.");
     return strip(found);
   },

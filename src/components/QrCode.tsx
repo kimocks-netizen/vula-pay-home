@@ -5,11 +5,11 @@ interface Props {
   value: string;
   size?: number;
   className?: string;
-  /** Draw the ScanPay mark in the middle of the code. */
+  /** Draw the Vula Pay mark in the middle of the code. */
   branded?: boolean;
 }
 
-/** Renders a real scannable QR for a permanent ScanPay payment reference. */
+/** Renders a real scannable QR for a permanent Vula Pay payment reference. */
 export function QrCode({ value, size = 220, className, branded = false }: Props) {
   const [src, setSrc] = useState<string | null>(null);
 
@@ -84,7 +84,7 @@ export function QrCode({ value, size = 220, className, branded = false }: Props)
       aria-label={`QR code for ${value}`}
     >
       {src ? (
-        <img src={src} alt={`ScanPay QR code ${value}`} width={size} height={size} />
+        <img src={src} alt={`Vula Pay QR code ${value}`} width={size} height={size} />
       ) : (
         <div className="h-full w-full animate-pulse rounded-md bg-muted" />
       )}

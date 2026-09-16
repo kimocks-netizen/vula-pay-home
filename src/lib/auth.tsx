@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useMemo, useState, type ReactNode
 import { api } from "./api/client";
 import type { PublicUser } from "./api/types";
 
-const STORAGE_KEY = "scanpay.session";
+const STORAGE_KEY = "vulapay.session";
 
 interface AuthValue {
   user: PublicUser | null;

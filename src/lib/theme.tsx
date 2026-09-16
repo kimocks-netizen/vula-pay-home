@@ -2,10 +2,10 @@ import { createContext, useCallback, useContext, useEffect, useState, type React
 
 export type Theme = "light" | "dark";
 
-const STORAGE_KEY = "scanpay.theme";
+const STORAGE_KEY = "vulapay.theme";
 
 /** Runs before hydration so the saved theme is applied without a flash. */
-export const themeInitScript = `(function(){try{var t=localStorage.getItem("${STORAGE_KEY}");if(t==="dark"){document.documentElement.classList.add("dark")}}catch(e){}})();`;
+export const themeInitScript = `(function(){try{var t=localStorage.getItem("vulapay.theme");if(t==="dark"){document.documentElement.classList.add("dark")}}catch(e){}})();`;
 
 const ThemeContext = createContext<{ theme: Theme; setTheme: (t: Theme) => void; toggle: () => void }>({
   theme: "light",

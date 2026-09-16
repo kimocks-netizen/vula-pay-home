@@ -21,7 +21,7 @@ export interface User {
   createdAt: string;
   phoneVerified: boolean;
   emailVerified: boolean;
-  /** Scan2Pay staff accounts see the admin console instead of a merchant dashboard. */
+  /** Vula Pay staff accounts see the admin console instead of a merchant dashboard. */
   role?: "merchant" | "admin";
   status?: "active" | "suspended";
 }

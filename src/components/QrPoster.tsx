@@ -17,7 +17,7 @@ interface Props {
 }
 
 /**
- * Printable, branded payment poster: ScanPay mark, trading name, location and
+ * Printable, branded payment poster: Vula Pay mark, trading name, location and
  * a scannable code with the logo in the middle.
  */
 export function QrPoster({
@@ -39,11 +39,11 @@ export function QrPoster({
             <ScanLine className="size-4" strokeWidth={2.5} />
           </span>
           <span className="font-display text-base font-bold tracking-tight">
-            Scan<span className="text-primary">2</span>Pay
+            Vula<span className="text-primary"> Pay</span>
           </span>
         </span>
         <span className="text-[9px] font-semibold tracking-[0.25em] uppercase opacity-70">
-          Scan. Pay. Done.
+          Vula. Pay. Done.
         </span>
       </div>
 

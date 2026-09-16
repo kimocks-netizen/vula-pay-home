@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ScanPay — Scan. Pay. Done." },
+      { title: "Vula Pay — Vula. Pay. Done." },
       {
         name: "description",
         content:
-          "ScanPay Technologies gives South African vendors, tip earners and taxi operators one permanent QR code for digital payments.",
+          "Vula Pay gives South African vendors, tip earners and taxi operators one permanent QR code for digital payments.",
       },
-      { name: "author", content: "ScanPay Technologies" },
+      { name: "author", content: "Vula Pay" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
