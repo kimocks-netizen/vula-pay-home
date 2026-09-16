@@ -332,33 +332,61 @@ function Landing() {
             </div>
           </Reveal>
 
-          <Reveal delay={150} className="mx-auto w-full max-w-md">
-            <div className="rounded-3xl border border-border bg-card p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-display text-xs font-bold tracking-widest text-primary uppercase">Vula Pay</p>
-                  <h3 className="mt-1 font-display text-xl font-bold">Payment</h3>
-                </div>
-                <img src={logoNoBg} alt="Vula Pay" className="size-9 object-contain" />
-              </div>
-              <div className="mt-6 rounded-2xl bg-secondary p-5">
-                <p className="text-xs text-muted-foreground">Paying to</p>
-                <p className="mt-1 font-semibold">Thandi's Spaza</p>
-                <div className="my-5 h-px bg-border" />
-                <p className="text-xs text-muted-foreground">Amount</p>
-                <p className="mt-1 font-display text-4xl font-bold">R 50.00</p>
-              </div>
-              <div className="mt-4 rounded-xl border border-border px-4 py-3">
-                <div className="flex items-center gap-3">
-                  <CreditCard className="size-5 text-primary" />
-                  <div>
-                    <p className="text-sm font-semibold">Digital payment</p>
-                    <p className="text-xs text-muted-foreground">Secure payment processing</p>
+          <Reveal delay={150} className="relative mx-auto w-full max-w-[360px]">
+            {/* Ambient glow behind the phone */}
+            <div className="animate-glow-pulse pointer-events-none absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-br from-primary/25 via-blue-400/10 to-transparent blur-2xl" />
+
+            {/* Phone frame — fixed neutral bezel so it stays visible against the screen in both themes (--ink and --card are identical in dark mode) */}
+            <div className="group rounded-[2.75rem] border-[10px] border-zinc-950 bg-zinc-950 p-1.5 shadow-2xl ring-1 ring-inset ring-white/10 transition-transform duration-500 hover:-translate-y-1.5 hover:rotate-[0.5deg] dark:border-black dark:bg-black">
+              <div className="overflow-hidden rounded-[2rem] bg-card text-card-foreground ring-1 ring-black/5 dark:ring-white/5">
+                {/* Status bar */}
+                <div className="flex items-center justify-between px-6 pt-3 pb-1 text-[10px] font-semibold text-muted-foreground">
+                  <span>9:41</span>
+                  <div className="flex items-center gap-1">
+                    <span className="h-1.5 w-3 rounded-sm bg-muted-foreground/60" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60" />
+                    <span className="h-1.5 w-3 rounded-sm bg-muted-foreground/60" />
                   </div>
                 </div>
-              </div>
-              <div className="mt-4 w-full cursor-pointer rounded-xl bg-primary px-5 py-3.5 text-center font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 active:scale-[0.98]">
-                Continue to payment
+
+                <div className="p-6 pt-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-display text-xs font-bold tracking-widest text-primary uppercase">Vula Pay</p>
+                      <h3 className="mt-1 font-display text-xl font-bold">Payment</h3>
+                    </div>
+                    <img src={logoNoBg} alt="Vula Pay" className="size-9 object-contain transition-transform duration-500 group-hover:rotate-6" />
+                  </div>
+
+                  <div className="mt-6 rounded-2xl bg-secondary p-5 ring-1 ring-border/60">
+                    <p className="text-xs text-muted-foreground">Paying to</p>
+                    <p className="mt-1 font-semibold">Thandi's Spaza</p>
+                    <div className="my-5 h-px bg-border" />
+                    <p className="text-xs text-muted-foreground">Amount</p>
+                    <p className="mt-1 font-display text-4xl font-bold tabular-nums">R 50.00</p>
+                  </div>
+
+                  <div className="mt-4 rounded-xl border border-border px-4 py-3">
+                    <div className="flex items-center gap-3">
+                      <span className="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10">
+                        <CreditCard className="size-4 text-primary" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold">Digital payment</p>
+                        <p className="text-xs text-muted-foreground">Secure payment processing</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-center font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 active:scale-[0.98]">
+                    Continue to payment <ArrowRight className="size-4" />
+                  </div>
+                </div>
+
+                {/* Home indicator */}
+                <div className="flex justify-center pb-2.5 pt-4">
+                  <span className="h-1 w-28 rounded-full bg-muted-foreground/30" />
+                </div>
               </div>
             </div>
           </Reveal>
