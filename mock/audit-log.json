@@ -1,0 +1,62 @@
+[
+  {
+    "id": "aud_010",
+    "actor": "Naledi Khumalo",
+    "actorRole": "admin",
+    "action": "pricing.published",
+    "target": "Pricing version 5 · Pro plan",
+    "detail": "Platform fee set to 1.0%, effective 01 Jul 2026.",
+    "createdAt": "2026-06-18T11:26:00Z",
+    "ip": "102.132.14.7"
+  },
+  {
+    "id": "aud_009",
+    "actor": "Naledi Khumalo",
+    "actorRole": "admin",
+    "action": "pricing.published",
+    "target": "Pricing version 4 · Basic plan",
+    "detail": "Platform fee lowered from 2.0% to 1.5%.",
+    "createdAt": "2026-06-18T11:24:00Z",
+    "ip": "102.132.14.7"
+  },
+  {
+    "id": "aud_008",
+    "actor": "Naledi Khumalo",
+    "actorRole": "admin",
+    "action": "merchant.approved",
+    "target": "Soweto Taxi Association",
+    "detail": "Payout bank verified, settlement cycle set to weekly.",
+    "createdAt": "2026-05-02T08:41:00Z",
+    "ip": "102.132.14.7"
+  },
+  {
+    "id": "aud_007",
+    "actor": "System",
+    "actorRole": "system",
+    "action": "settlement.batch",
+    "target": "Batch STL-2026-08-28",
+    "detail": "Paid out R14 820.00 to 3 merchants.",
+    "createdAt": "2026-08-28T03:00:00Z",
+    "ip": "—"
+  },
+  {
+    "id": "aud_006",
+    "actor": "Naledi Khumalo",
+    "actorRole": "admin",
+    "action": "provider.config.updated",
+    "target": "Paystack",
+    "detail": "Webhook endpoint rotated.",
+    "createdAt": "2026-04-11T14:05:00Z",
+    "ip": "102.132.14.7"
+  },
+  {
+    "id": "aud_005",
+    "actor": "Thandi Mokoena",
+    "actorRole": "merchant",
+    "action": "product.price.updated",
+    "target": "Amagwinya (2 pack)",
+    "detail": "R10.00 → R12.00",
+    "createdAt": "2026-03-19T06:22:00Z",
+    "ip": "41.13.88.201"
+  }
+]

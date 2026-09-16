@@ -1,0 +1,13 @@
+{
+  "currency": "ZAR",
+  "provider": "Paystack",
+  "providerPercent": 2.9,
+  "providerFixedCents": 100,
+  "platformFeePercentByPlan": {
+    "plan_free": 2.5,
+    "plan_basic": 1.5,
+    "plan_pro": 1.0
+  },
+  "version": "2026-07-01",
+  "effectiveFrom": "2026-07-01T00:00:00Z"
+}

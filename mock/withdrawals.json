@@ -1,0 +1,72 @@
+[
+  {
+    "id": "wd_001",
+    "reference": "WD-4TQ81M",
+    "merchantId": "mch_001",
+    "amountCents": 250000,
+    "bank": "Capitec Bank",
+    "accountMasked": "•••• 4821",
+    "status": "paid",
+    "note": "Stock money for the weekend",
+    "requestedAt": "2026-08-21T07:40:00Z",
+    "decidedAt": "2026-08-21T11:05:00Z",
+    "decidedBy": "Naledi Khumalo",
+    "paidAt": "2026-08-22T06:00:00Z"
+  },
+  {
+    "id": "wd_002",
+    "reference": "WD-9KP20C",
+    "merchantId": "mch_002",
+    "amountCents": 48000,
+    "bank": "TymeBank",
+    "accountMasked": "•••• 7712",
+    "status": "approved",
+    "note": "",
+    "requestedAt": "2026-09-01T15:12:00Z",
+    "decidedAt": "2026-09-02T08:30:00Z",
+    "decidedBy": "Naledi Khumalo",
+    "paidAt": null
+  },
+  {
+    "id": "wd_003",
+    "reference": "WD-1XB77D",
+    "merchantId": "mch_003",
+    "amountCents": 130000,
+    "bank": "FNB",
+    "accountMasked": "•••• 3390",
+    "status": "pending",
+    "note": "Weekly driver payout",
+    "requestedAt": "2026-09-03T18:04:00Z",
+    "decidedAt": null,
+    "decidedBy": null,
+    "paidAt": null
+  },
+  {
+    "id": "wd_004",
+    "reference": "WD-6MC03A",
+    "merchantId": "mch_001",
+    "amountCents": 90000,
+    "bank": "Capitec Bank",
+    "accountMasked": "•••• 4821",
+    "status": "pending",
+    "note": "",
+    "requestedAt": "2026-09-04T06:48:00Z",
+    "decidedAt": null,
+    "decidedBy": null,
+    "paidAt": null
+  },
+  {
+    "id": "wd_005",
+    "reference": "WD-2FG55R",
+    "merchantId": "mch_002",
+    "amountCents": 15000,
+    "bank": "TymeBank",
+    "accountMasked": "•••• 7712",
+    "status": "rejected",
+    "note": "Bank details did not match the account holder",
+    "requestedAt": "2026-07-14T09:22:00Z",
+    "decidedAt": "2026-07-14T13:00:00Z",
+    "decidedBy": "Naledi Khumalo",
+    "paidAt": null
+  }
+]

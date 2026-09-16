@@ -1,0 +1,101 @@
+Scan2Pay-frontend/
+├── public/
+│   ├── favicon.ico
+│   └── robots.txt
+│
+├── src/
+│   ├── assets/                           # Static images
+│   │   ├── hero-vendor.jpg
+│   │   ├── kit-lanyard-bib.jpg
+│   │   └── ...                           # use-*.jpg images
+│   │
+│   ├── components/
+│   │   ├── ui/                           # shadcn/ui primitives (Radix-based)
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   └── ...                       # ~45 more primitives
+│   │   │
+│   │   ├── AdminCharts.tsx               # Recharts dashboard charts
+│   │   ├── AdminShell.tsx                # Admin layout wrapper
+│   │   ├── AppShell.tsx                  # Main app layout wrapper
+│   │   ├── Logo.tsx                      # Brand logo component
+│   │   ├── QrCode.tsx                    # QR code renderer (qrcode lib)
+│   │   ├── QrPoster.tsx                  # Printable QR poster
+│   │   └── ThemeToggle.tsx               # Dark/light mode toggle
+│   │
+│   ├── hooks/
+│   │   └── use-mobile.tsx                # Mobile breakpoint detection
+│   │
+│   ├── lib/
+│   │   ├── api/
+│   │   │   ├── client.ts                 # Fetch wrapper + auth injection
+│   │   │   └── types.ts                  # API response types
+│   │   ├── auth.tsx                      # Auth context + session logic
+│   │   ├── error-capture.ts              # Error capture utility
+│   │   ├── error-page.ts                 # Error page helper
+│   │   ├── format.ts                     # Currency, date formatters
+│   │   ├── lovable-error-reporting.ts    # Lovable.dev error reporting
+│   │   ├── theme.tsx                     # Theme context + provider
+│   │   └── utils.ts                      # cn() helper + general utilities
+│   │
+│   ├── routes/                           # TanStack Router file-based routes
+│   │   ├── __root.tsx                    # Root layout (providers, fonts)
+│   │   ├── index.tsx                     # Landing page (/)
+│   │   ├── auth.tsx                      # Login / signup
+│   │   ├── dashboard.tsx                 # Merchant dashboard
+│   │   ├── codes.tsx                     # Payment codes list
+│   │   ├── codes.$codeId.tsx             # Payment code detail
+│   │   ├── my-code.tsx                   # Merchant's own QR code
+│   │   ├── charge.tsx                    # Charge customer
+│   │   ├── pay.$reference.tsx            # Customer payment page
+│   │   ├── products.tsx                  # Products list
+│   │   ├── transactions.tsx              # Transaction history
+│   │   ├── reports.tsx                   # Reports
+│   │   ├── settings.tsx                  # Account settings
+│   │   ├── withdraw.tsx                  # Withdrawal form
+│   │   ├── admin.index.tsx               # Admin console
+│   │   ├── admin.users.tsx               # User management
+│   │   ├── admin.merchants.tsx           # Merchant management
+│   │   ├── admin.transactions.tsx        # All transactions
+│   │   ├── admin.withdrawals.tsx         # Withdrawal approvals
+│   │   ├── admin.settlements.tsx         # Settlements
+│   │   ├── admin.pricing.tsx             # Pricing management
+│   │   ├── admin.providers.tsx           # Payment providers
+│   │   └── admin.audit.tsx               # Audit log
+│   │
+│   ├── router.tsx                        # TanStack Router + QueryClient setup
+│   ├── routeTree.gen.ts                  # Auto-generated route tree
+│   ├── server.ts                         # SSR server entry (Nitro)
+│   ├── start.ts                          # App start entry point
+│   └── styles.css                        # Tailwind v4 + CSS variables
+│
+├── docs/                                 # (see docs/ — architecture, API, etc.)
+├── mock/                                 # (see mock/ — JSON fixtures)
+│
+├── .prettierrc                           # Prettier config
+├── AGENTS.md                             # AI agent instructions
+├── bunfig.toml                           # Bun configuration
+├── components.json                       # shadcn/ui config
+├── eslint.config.js                      # ESLint config
+├── package.json                          # Dependencies + scripts
+├── tsconfig.json                         # TypeScript config
+└── vite.config.ts                        # Vite + TanStack Start config
+
+---
+
+## Tech Stack
+
+- Framework:    TanStack Start (SSR React meta-framework)
+- Language:     TypeScript 5.8
+- Styling:      Tailwind CSS v4 + tw-animate-css
+- UI:           shadcn/ui (full Radix primitive set)
+- State:        TanStack Query v5 (no Zustand)
+- Routing:      TanStack Router (file-based, auto-generated)
+- Forms:        React Hook Form + Zod
+- Charts:       Recharts
+- QR:           qrcode (native generation)
+- Build:        Vite 8 + Bun + Nitro (SSR server)
+- Auth:         Custom (lib/auth.tsx)
+- Tooling:      ESLint + Prettier
+- Platform:     Lovable.dev

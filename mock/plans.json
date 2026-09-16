@@ -1,0 +1,44 @@
+[
+  {
+    "id": "plan_free",
+    "name": "Free",
+    "monthlyPriceCents": 0,
+    "platformFeePercent": 2.5,
+    "features": [
+      "1 payment code",
+      "Variable amount only",
+      "Basic transaction history",
+      "Email support"
+    ],
+    "recommended": false
+  },
+  {
+    "id": "plan_basic",
+    "name": "Basic",
+    "monthlyPriceCents": 10000,
+    "platformFeePercent": 1.5,
+    "features": [
+      "Unlimited payment codes",
+      "Fixed & variable amounts",
+      "Product catalogue",
+      "Printable QR packs",
+      "Basic reporting"
+    ],
+    "recommended": true
+  },
+  {
+    "id": "plan_pro",
+    "name": "Pro",
+    "monthlyPriceCents": 25000,
+    "platformFeePercent": 1.0,
+    "features": [
+      "Everything in Basic",
+      "Advanced reporting & exports",
+      "Multiple team members",
+      "Association / multi-site codes",
+      "WhatsApp assistant",
+      "Priority support"
+    ],
+    "recommended": false
+  }
+]
