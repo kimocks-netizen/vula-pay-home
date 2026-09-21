@@ -12,7 +12,7 @@ export const Route = createFileRoute("/auth")({
 
 function AuthRedirect() {
   const { mode } = Route.useSearch();
-  const webUrl = import.meta.env.VITE_WEB_URL ?? "http://localhost:3000";
+  const webUrl = import.meta.env.VITE_WEB_URL ?? "https://www.app.vula-pay.co.za";
   const target = mode ? `${webUrl}/login?mode=${mode}` : `${webUrl}/login`;
 
   if (typeof window !== "undefined") {
