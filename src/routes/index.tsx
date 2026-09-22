@@ -6,6 +6,7 @@ import {
   CheckCircle2,
   CreditCard,
   HandCoins,
+  PlaySquare,
   QrCode,
   ShieldCheck,
   Smartphone,
@@ -498,6 +499,27 @@ function Landing() {
             >
               Get my free QR code <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
+
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              {[
+                { Icon: Smartphone, top: "Download on the", bottom: "App Store" },
+                { Icon: PlaySquare, top: "GET IT ON", bottom: "Google Play" },
+              ].map(({ Icon, top, bottom }) => (
+                <div
+                  key={bottom}
+                  className="relative flex items-center gap-2 rounded-xl border border-ink-muted/30 bg-white/5 px-4 py-2.5 opacity-70"
+                >
+                  <Icon className="size-6" />
+                  <div className="text-left leading-none">
+                    <p className="text-[9px] uppercase tracking-wide text-ink-muted">{top}</p>
+                    <p className="text-sm font-semibold">{bottom}</p>
+                  </div>
+                  <span className="absolute -top-2 -right-2 rounded-full bg-primary px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-primary-foreground">
+                    Coming soon
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </Reveal>
       </section>
@@ -507,6 +529,10 @@ function Landing() {
           <div className="transition-transform duration-300 hover:scale-105">
             <Logo inverted />
           </div>
+          <nav className="flex flex-wrap items-center gap-5 text-sm">
+            <Link to="/terms" className="hover:text-ink-foreground">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-ink-foreground">Privacy Policy</Link>
+          </nav>
           <p className="text-sm">© Vula Pay · South Africa</p>
         </div>
       </footer>
