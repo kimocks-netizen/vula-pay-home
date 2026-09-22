@@ -6,11 +6,11 @@ import {
   CheckCircle2,
   CreditCard,
   HandCoins,
-  PlaySquare,
   QrCode,
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
+import { toast } from "sonner";
 
 import { Logo } from "@/components/Logo";
 import { Reveal } from "@/components/Reveal";
@@ -25,6 +25,26 @@ import stepsLaptopLight from "@/assets/steps-laptop-light.png";
 import stepsLaptopDark from "@/assets/steps-laptop-dark.png";
 import stepsMobileLight from "@/assets/steps-mobile-light.png";
 import stepsMobileDark from "@/assets/steps-mobile-dark.png";
+
+// ---------------------------------------------------------------------------
+// Store badge icons
+// ---------------------------------------------------------------------------
+
+function AppleIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.06 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.026-.013-3.181-1.221-3.21-4.857-.028-3.04 2.48-4.494 2.597-4.564-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.893-1.081 1.517-2.594 1.352-4.095-1.24.05-2.75.837-3.66 1.916-.822.966-1.541 2.502-1.352 3.972 1.409.103 2.86-.712 3.66-1.793z" />
+    </svg>
+  );
+}
+
+function GooglePlayIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.41l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626-2.596-2.596 2.596-2.596zM5.864 2.658L16.802 8.99l-2.302 2.302-8.634-8.634z" />
+    </svg>
+  );
+}
 
 // ---------------------------------------------------------------------------
 // CMS API
@@ -215,6 +235,29 @@ function Landing() {
                 </li>
               ))}
             </ul>
+
+            <div
+              className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both mt-6 flex flex-wrap gap-3 duration-700"
+              style={{ animationDelay: "450ms" }}
+            >
+              {[
+                { Icon: AppleIcon, top: "Download on the", bottom: "App Store" },
+                { Icon: GooglePlayIcon, top: "GET IT ON", bottom: "Google Play" },
+              ].map(({ Icon, top, bottom }) => (
+                <button
+                  key={bottom}
+                  type="button"
+                  onClick={() => toast.info("Coming soon", { description: `Vula Pay isn't on the ${bottom} yet.` })}
+                  className="flex min-w-[170px] items-center gap-2.5 rounded-xl border border-ink-muted/30 bg-white/5 px-5 py-3 transition-colors hover:bg-white/10"
+                >
+                  <Icon className="size-7" />
+                  <div className="text-left leading-none">
+                    <p className="text-[9px] uppercase tracking-wide text-ink-muted">{top}</p>
+                    <p className="text-sm font-semibold">{bottom}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
 
           <div
@@ -502,22 +545,21 @@ function Landing() {
 
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               {[
-                { Icon: Smartphone, top: "Download on the", bottom: "App Store" },
-                { Icon: PlaySquare, top: "GET IT ON", bottom: "Google Play" },
+                { Icon: AppleIcon, top: "Download on the", bottom: "App Store" },
+                { Icon: GooglePlayIcon, top: "GET IT ON", bottom: "Google Play" },
               ].map(({ Icon, top, bottom }) => (
-                <div
+                <button
                   key={bottom}
-                  className="relative flex items-center gap-2 rounded-xl border border-ink-muted/30 bg-white/5 px-4 py-2.5 opacity-70"
+                  type="button"
+                  onClick={() => toast.info("Coming soon", { description: `Vula Pay isn't on the ${bottom} yet.` })}
+                  className="flex min-w-[170px] items-center gap-2.5 rounded-xl border border-ink-muted/30 bg-white/5 px-5 py-3 transition-colors hover:bg-white/10"
                 >
-                  <Icon className="size-6" />
+                  <Icon className="size-7" />
                   <div className="text-left leading-none">
                     <p className="text-[9px] uppercase tracking-wide text-ink-muted">{top}</p>
                     <p className="text-sm font-semibold">{bottom}</p>
                   </div>
-                  <span className="absolute -top-2 -right-2 rounded-full bg-primary px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-primary-foreground">
-                    Coming soon
-                  </span>
-                </div>
+                </button>
               ))}
             </div>
           </div>
