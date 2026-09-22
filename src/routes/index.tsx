@@ -210,21 +210,21 @@ function Landing() {
               are getting paid without cash and without a card machine. One code. Any amount.
             </p>
             <div
-              className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both mt-8 flex flex-wrap gap-3 duration-700"
+              className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both mt-8 flex flex-nowrap gap-2 duration-700 sm:gap-3"
               style={{ animationDelay: "300ms" }}
             >
               <Link
                 to="/auth"
                 search={{ mode: "register" }}
-                className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0"
+                className="group inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-3 py-3 font-semibold whitespace-nowrap text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0 sm:flex-none sm:px-6 sm:py-3.5"
               >
-                Get my free QR code <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                Get my QR code <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
                 href="#how"
-                className="inline-flex items-center gap-2 rounded-xl border border-ink-muted/30 px-6 py-3.5 font-semibold text-ink-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-ink-muted/50 hover:bg-white/5"
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl border border-ink-muted/30 px-3 py-3 font-semibold whitespace-nowrap text-ink-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-ink-muted/50 hover:bg-white/5 sm:flex-none sm:px-6 sm:py-3.5"
               >
-                See how it works
+                How it works
               </a>
             </div>
             <ul
@@ -239,7 +239,7 @@ function Landing() {
             </ul>
 
             <div
-              className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both mt-6 flex flex-wrap gap-3 duration-700"
+              className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both mt-6 flex flex-nowrap justify-center gap-4 duration-700 sm:justify-start sm:gap-3"
               style={{ animationDelay: "450ms" }}
             >
               {[
@@ -250,12 +250,12 @@ function Landing() {
                   key={bottom}
                   type="button"
                   onClick={() => toast.info("Coming soon", { description: `Vula Pay isn't on the ${bottom} yet.` })}
-                  className="flex min-w-[170px] items-center gap-2.5 rounded-xl border border-ink-muted/30 bg-white/5 px-5 py-3 transition-colors hover:bg-white/10"
+                  className="flex max-w-[140px] min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg border border-ink-muted/30 bg-white/5 px-2 py-2.5 transition-colors hover:bg-white/10 sm:max-w-none sm:min-w-[170px] sm:flex-none sm:justify-start sm:gap-2.5 sm:rounded-xl sm:px-5 sm:py-3"
                 >
-                  <Icon className="size-7" />
+                  <Icon className="size-5 shrink-0 sm:size-7" />
                   <div className="text-left leading-none">
-                    <p className="text-[9px] uppercase tracking-wide text-ink-muted">{top}</p>
-                    <p className="text-sm font-semibold">{bottom}</p>
+                    <p className="text-[7px] whitespace-nowrap uppercase tracking-wide text-ink-muted sm:text-[9px]">{top}</p>
+                    <p className="text-xs font-semibold whitespace-nowrap sm:text-sm">{bottom}</p>
                   </div>
                 </button>
               ))}
@@ -556,7 +556,7 @@ function Landing() {
               Get my free QR code <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <div className="mx-auto mt-6 flex max-w-sm flex-nowrap items-center justify-center gap-4 sm:gap-3">
               {[
                 { Icon: AppleIcon, top: "Download on the", bottom: "App Store" },
                 { Icon: GooglePlayIcon, top: "GET IT ON", bottom: "Google Play" },
@@ -565,12 +565,12 @@ function Landing() {
                   key={bottom}
                   type="button"
                   onClick={() => toast.info("Coming soon", { description: `Vula Pay isn't on the ${bottom} yet.` })}
-                  className="flex min-w-[170px] items-center gap-2.5 rounded-xl border border-ink-muted/30 bg-white/5 px-5 py-3 transition-colors hover:bg-white/10"
+                  className="flex max-w-[140px] min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg border border-ink-muted/30 bg-white/5 px-2 py-2.5 transition-colors hover:bg-white/10 sm:max-w-none sm:min-w-[170px] sm:flex-none sm:justify-start sm:gap-2.5 sm:rounded-xl sm:px-5 sm:py-3"
                 >
-                  <Icon className="size-7" />
+                  <Icon className="size-5 shrink-0 sm:size-7" />
                   <div className="text-left leading-none">
-                    <p className="text-[9px] uppercase tracking-wide text-ink-muted">{top}</p>
-                    <p className="text-sm font-semibold">{bottom}</p>
+                    <p className="text-[7px] whitespace-nowrap uppercase tracking-wide text-ink-muted sm:text-[9px]">{top}</p>
+                    <p className="text-xs font-semibold whitespace-nowrap sm:text-sm">{bottom}</p>
                   </div>
                 </button>
               ))}
