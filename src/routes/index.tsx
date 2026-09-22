@@ -13,7 +13,9 @@ import {
 import { toast } from "sonner";
 
 import { Logo } from "@/components/Logo";
+import { PhoneMockup } from "@/components/PhoneMockup";
 import { Reveal } from "@/components/Reveal";
+import { FORCE_LIGHT_VARS } from "@/lib/force-light";
 import logoNoBg from "@/assets/logo-no-bg.png";
 import heroVendor from "@/assets/hero-vendor.png";
 import kitLanyardBib from "@/assets/kit-lanyard-bib.png";
@@ -280,7 +282,10 @@ function Landing() {
                 className="aspect-[4/5] w-full rounded-3xl object-cover shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
               />
             )}
-            <div className="animate-float absolute -bottom-5 -left-3 flex items-center gap-3 rounded-2xl bg-card p-3 pr-4 text-card-foreground shadow-xl sm:-left-6">
+            <div
+              style={FORCE_LIGHT_VARS}
+              className="animate-float absolute -bottom-5 -left-3 flex items-center gap-3 rounded-2xl bg-card p-3 pr-4 text-card-foreground shadow-xl sm:-left-6"
+            >
               <span className="grid size-10 place-items-center rounded-xl bg-primary/10">
                 <CheckCircle2 className="size-5 text-primary" />
               </span>
@@ -288,6 +293,14 @@ function Landing() {
                 <p className="text-sm font-semibold">Payment received</p>
                 <p className="text-xs text-muted-foreground">Straight to your phone</p>
               </div>
+            </div>
+
+            {/* Live demo of the actual charge screen — not a stock photo */}
+            <div
+              className="animate-float absolute -top-8 -right-4 hidden origin-top-right scale-[0.42] sm:-right-10 sm:block md:-right-16"
+              style={{ animationDelay: "1.5s" }}
+            >
+              <PhoneMockup />
             </div>
           </div>
         </div>
