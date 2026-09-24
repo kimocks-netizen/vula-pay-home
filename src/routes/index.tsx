@@ -125,6 +125,7 @@ export const Route = createFileRoute("/")({
     links: [{ rel: "icon", href: "/favicon.ico" }],
   }),
   loader: () => fetchCmsImages(),
+  staleTime: 5 * 60 * 1000,
   component: Landing,
 });
 
@@ -133,7 +134,7 @@ export const Route = createFileRoute("/")({
 // ---------------------------------------------------------------------------
 
 function Landing() {
-  const cms = Route.useLoaderData();
+  const cms = Route.useLoaderData() ?? emptyCms;
 
   const stories = [
     { slot: cms.feature_1, name: "Vula Tip · Waiters & baristas",  quote: "People don't carry cash anymore. They just Vula Tip before they even leave the table.",   fallback: useTips   },
