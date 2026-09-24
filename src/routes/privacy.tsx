@@ -39,7 +39,7 @@ function PrivacyPage() {
             "Merchant or recipient information: business or display name, trading category and other profile information.",
             "Banking information: bank-account details required for merchant or recipient verification and settlement.",
             "Transaction information: transaction amounts, timestamps, payment status, transaction references, QR-code references and related settlement information.",
-            "Payment-related information: payment-provider references, tokens or identifiers made available to Vula Pay. Vula Pay does not store full payment-card numbers.",
+            "Payment-related information: payment-provider references, tokens or identifiers made available to Vula Pay.",
             "Device and technical information: device type, operating system, browser type, IP address and information required to maintain the security and operation of the platform.",
             "Verification information: information reasonably required to verify identity, business information or banking details where applicable.",
           ]}
