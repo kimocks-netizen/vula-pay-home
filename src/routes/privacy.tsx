@@ -17,7 +17,7 @@ function PrivacyPage() {
     <LegalLayout title="Privacy Policy" lastUpdated="23 September 2026">
       <p>
         Vula Pay is a product of Adequate Strategies (Pty) Ltd
-        (Reg. No. 2024/021247/07).
+        (Reg. No. 2024/021247/07) & KIMOCKS AT ONLINE (PTY) LTD (Reg. No. 2024/265021/07).
       </p>
 
       <p>
@@ -239,7 +239,7 @@ function PrivacyPage() {
       <LegalSection title="13. Information Officer & Contact">
         <p>
           Vula Pay is a product of Adequate Strategies (Pty) Ltd
-          (Reg. No. 2024/021247/07).
+          (Reg. No. 2024/021247/07) & KIMOCKS AT ONLINE (PTY) LTD (Reg. No. 2024/265021/07).
         </p>
 
         <p>

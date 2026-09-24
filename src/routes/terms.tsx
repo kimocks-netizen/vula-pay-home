@@ -17,7 +17,7 @@ function TermsPage() {
     <LegalLayout title="Terms of Service" lastUpdated="23 September 2026">
       <p>
         Welcome to Vula Pay, a product of Adequate Strategies (Pty) Ltd
-        (Reg. No. 2024/021247/07). By registering for, accessing, or using
+        (Reg. No. 2024/021247/07) & KIMOCKS AT ONLINE (PTY) LTD (Reg. No. 2024/265021/07). By registering for, accessing, or using
         Vula Pay, you agree to these Terms of Service.
       </p>
 
@@ -198,8 +198,8 @@ function TermsPage() {
         </p>
 
         <p>
-          To the extent permitted by law, Vula Pay and Adequate Strategies
-          (Pty) Ltd will not be liable for indirect, incidental or
+          To the extent permitted by law, Vula Pay,  Adequate Strategies
+          (Pty) Ltd and KIMOCKS AT ONLINE (PTY) LTD will not be liable for indirect, incidental or
           consequential loss arising from use of the platform or from failures
           caused by third-party payment, banking or telecommunications
           services.
@@ -232,7 +232,7 @@ function TermsPage() {
       <LegalSection title="15. Company Information & Contact">
         <p>
           Vula Pay is a product of Adequate Strategies (Pty) Ltd
-          (Reg. No. 2024/021247/07).
+          (Reg. No. 2024/021247/07) & KIMOCKS AT ONLINE (PTY) LTD (Reg. No. 2024/265021/07).
         </p>
 
         <p>
