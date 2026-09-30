@@ -26,7 +26,9 @@ import useCarwash from "@/assets/use-carwash.png";
 import stepsLaptopLight from "@/assets/steps-laptop-light.png";
 import stepsLaptopDark from "@/assets/steps-laptop-dark.png";
 import stepsMobileLight from "@/assets/steps-mobile-light.png";
-import stepsMobileDark from "@/assets/steps-mobile-dark.png";
+import stepsMobileDark from "@/assets/steps-mobile-dark.png"
+import whatsappLight from "@/assets/whatsapp-light.png";
+//import whatsappLight from "@/assets/whatsapp-dark.png";
 
 // ---------------------------------------------------------------------------
 // Store badge icons
@@ -135,6 +137,7 @@ export const Route = createFileRoute("/")({
 
 function Landing() {
   const cms = Route.useLoaderData() ?? emptyCms;
+  const whatsappUrl = "https://wa.me/27660404333";
 
   const stories = [
     { slot: cms.feature_1, name: "Vula Tip · Waiters & baristas",  quote: "People don't carry cash anymore. They just Vula Tip before they even leave the table.",   fallback: useTips   },
@@ -357,6 +360,232 @@ function Landing() {
           </Reveal>
         </div>
       </section>
+      {/* WhatsApp access */}
+    <section
+      id="whatsapp"
+      className="relative overflow-hidden border-y border-border bg-background"
+    >
+      {/* Background effects */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-32 top-1/2 size-[420px] -translate-y-1/2 rounded-full bg-primary/8 blur-3xl" />
+        <div className="absolute -right-32 top-1/2 size-[420px] -translate-y-1/2 rounded-full bg-success/8 blur-3xl" />
+
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at center, currentColor 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1fr_1fr] lg:gap-16 lg:py-16">
+
+        {/* LEFT */}
+        <Reveal>
+          <div className="max-w-xl">
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 shadow-sm">
+              <span className="grid size-7 place-items-center rounded-full bg-success text-success-foreground">
+
+                {/* WhatsApp icon */}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="size-4"
+                  aria-hidden="true"
+                >
+                  <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.5 0 .16 5.34.16 11.92c0 2.1.55 4.15 1.6 5.96L.06 24l6.27-1.64a11.9 11.9 0 0 0 5.75 1.46h.01C18.66 23.82 24 18.48 24 11.9c0-3.18-1.24-6.17-3.48-8.42ZM12.09 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.86 9.86 0 0 1-1.52-5.27C2.21 6.45 6.65 2 12.09 2a9.8 9.8 0 0 1 6.98 2.9 9.8 9.8 0 0 1 2.89 7c0 5.45-4.43 9.9-9.87 9.9Zm5.42-7.41c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47a8.92 8.92 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z" />
+                </svg>
+              </span>
+
+              <span className="text-sm font-semibold">
+                VulaPay on WhatsApp
+              </span>
+
+              <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold tracking-widest text-primary uppercase">
+                New
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h2 className="mt-6 font-display text-4xl leading-[1.05] font-bold tracking-tight sm:text-5xl">
+              Quick access to
+              <br />
+              your earnings
+              <br />
+
+              <span className="text-primary">
+                anytime, anywhere.
+              </span>
+            </h2>
+
+            {/* Description */}
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Check your balance, view today's earnings, see your monthly
+              summary, recent transactions, withdrawals and support —
+              all on WhatsApp.
+              <span className="font-medium text-foreground">
+                {" "}No login. No app needed.
+              </span>
+            </p>
+
+            {/* Feature icons */}
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+
+              {/* Balance */}
+              <div className="group">
+                <span className="grid size-11 place-items-center rounded-2xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
+                  <span className="text-xl font-bold">R</span>
+                </span>
+
+                <p className="mt-3 text-sm font-semibold">
+                  Check balance
+                </p>
+
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  Instantly
+                </p>
+              </div>
+
+              {/* Earnings */}
+              <div className="group">
+                <span className="grid size-11 place-items-center rounded-2xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    className="size-5"
+                  >
+                    <path d="M5 20v-6M12 20V8M19 20V4" />
+                  </svg>
+                </span>
+
+                <p className="mt-3 text-sm font-semibold">
+                  View earnings
+                </p>
+
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  Daily & monthly
+                </p>
+              </div>
+
+              {/* Transactions */}
+              <div className="group">
+                <span className="grid size-11 place-items-center rounded-2xl bg-accent/15 text-accent-foreground transition-transform duration-300 group-hover:scale-110">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="size-5"
+                  >
+                    <path d="M6 3h12v18H6z" />
+                    <path d="M9 8h6M9 12h6M9 16h4" />
+                  </svg>
+                </span>
+
+                <p className="mt-3 text-sm font-semibold">
+                  Transactions
+                </p>
+
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  Recent activity
+                </p>
+              </div>
+
+              {/* Support */}
+              <div className="group">
+                <span className="grid size-11 place-items-center rounded-2xl bg-success/10 text-success transition-transform duration-300 group-hover:scale-110">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="size-5"
+                  >
+                    <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
+                    <path d="M4 14h3v5H4zM17 14h3v5h-3z" />
+                    <path d="M17 19c-1 2-3 2-5 2" />
+                  </svg>
+                </span>
+
+                <p className="mt-3 text-sm font-semibold">
+                  Get help
+                </p>
+
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  When you need it
+                </p>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center justify-center gap-2.5 rounded-xl bg-success px-5 py-3.5 font-semibold text-success-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-success/20 active:translate-y-0"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="size-5"
+                  aria-hidden="true"
+                >
+                  <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.5 0 .16 5.34.16 11.92c0 2.1.55 4.15 1.6 5.96L.06 24l6.27-1.64a11.9 11.9 0 0 0 5.75 1.46h.01C18.66 23.82 24 18.48 24 11.9c0-3.18-1.24-6.17-3.48-8.42ZM12.09 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.86 9.86 0 0 1-1.52-5.27C2.21 6.45 6.65 2 12.09 2a9.8 9.8 0 0 1 6.98 2.9 9.8 9.8 0 0 1 2.89 7c0 5.45-4.43 9.9-9.87 9.9Zm5.42-7.41c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47a8.92 8.92 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z" />
+                </svg>
+
+                Chat on WhatsApp
+
+                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
+                {[
+                  "Fast",
+                  "Secure",
+                  "Always available",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="flex items-center gap-1.5"
+                  >
+                    <CheckCircle2 className="size-3.5 text-primary" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+
+        {/* RIGHT SIDE */}
+        <Reveal
+          delay={150}
+          className="relative mx-auto w-full max-w-[620px]"
+        >
+          {/* large soft shape */}
+          <div className="pointer-events-none absolute inset-8 rounded-[4rem] bg-gradient-to-br from-primary/10 via-secondary to-success/10 blur-xl" />
+
+
+          {/* MAIN IMAGE */}
+          <img
+            src={whatsappLight}
+            alt="VulaPay WhatsApp bot showing balance, earnings, transactions and account tools"
+            loading="lazy"
+            className="relative z-10 mx-auto max-h-[650px] w-full object-contain drop-shadow-2xl transition-transform duration-500 hover:-translate-y-1"
+          />
+
+        </Reveal>
+      </div>
+    </section>
 
       {/* Payment experience */}
       <section className="border-y border-border bg-secondary/50">
