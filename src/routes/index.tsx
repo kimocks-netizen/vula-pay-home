@@ -683,8 +683,8 @@ function Landing() {
             </Link>
             <div className="mt-6 flex w-full gap-2 justify-center sm:w-auto sm:gap-3">
               {[
-                { Icon: AppleIcon, topMobile: "iOS", top: "Download on the", bottom: "App Store" },
-                { Icon: GooglePlayIcon, topMobile: "Android", top: "GET IT ON", bottom: "Google Play" },
+                { Icon: AppleIcon, topMobile: "iOS", top: "Download on the", bottom: " Store" },
+                { Icon: GooglePlayIcon, topMobile: "Android", top: "GET IT ON", bottom: "Google " },
               ].map(({ Icon, topMobile, top, bottom }) => (
                 <button
                   key={bottom}
