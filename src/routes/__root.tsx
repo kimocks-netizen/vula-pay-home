@@ -89,6 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Vula Pay" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "facebook-domain-verification", content: "m0o4osijj345v3l486aqy2c938k9ec" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
